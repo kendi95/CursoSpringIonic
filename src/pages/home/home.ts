@@ -30,6 +30,10 @@ export class HomePage {
     
   }
 
+  signup(){
+    this.navCtrl.setRoot('SignupPage');
+  }
+
   ionViewWillEnter(){
     this.menu.swipeEnable(false);
   }
