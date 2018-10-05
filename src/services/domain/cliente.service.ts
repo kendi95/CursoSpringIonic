@@ -18,8 +18,10 @@ export class ClienteService{
     }
 
     getImageFromBucket(id: string): Observable<any>{
-        let url = `${API_CONFIG.baseUrlBucket}/cp${id}.jpg`
-        return this.http.get(url, {responseType: 'blob'});
+        return this.http.get(
+            `${API_CONFIG.baseUrlBucket}/cp${id}.jpg`,
+            {responseType: 'blob'}
+        );
     }
 
     insert(obj: ClienteDTO){
