@@ -18,17 +18,17 @@ export class ProfilePage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public storate: StorageService,
+    public storage: StorageService,
     public clienteService: ClienteService) {}
 
   ionViewDidLoad() {
 
-    let localUser = this.storate.getLocalUser();
+    let localUser = this.storage.getLocalUser();
 
     if(localUser && localUser.email){
       this.clienteService.findByEmail(localUser.email)
         .subscribe(response =>{
-          this.cliente = response;
+          this.cliente = response as ClienteDTO;
           this.getImageIfExists();
         },
         error =>{
