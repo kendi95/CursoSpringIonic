@@ -34,6 +34,6 @@
   </ion-list>
 
   <button *ngIf="total() <= 0" ion-button block outline (click)="redirectToCategorias()">Adicionar novo item no carrinho...</button>
-  <button ion-button block color="secondary" (click)="checkout()">Finalizar pedido</button>
+  <button ion-button block color="secondary" (click)="checkout()" *ngIf="total() > 0">Finalizar pedido</button>
 
 </ion-content>
