@@ -21,14 +21,14 @@
   <ion-card>
     <ion-card-header>Enviar imagem de perfil</ion-card-header>
 
-    <ion-item *ngIf="picture">
-      <img [src]="picture">
+    <ion-item *ngIf="userPicture">
+      <img [src]="userPicture">
     </ion-item>
 
     <ion-item>
       <button ion-button block (click)="getCameraPicture()" [disabled]="cameraOn">Câmera</button>
-      <button ion-button block outline (click)="sendPicture()" *ngIf="picture">Enviar foto</button>
-      <button ion-button block outline (click)="cancel()" *ngIf="picture">Cancelar</button>
+      <button ion-button block outline (click)="sendPicture()" *ngIf="userPicture">Enviar foto</button>
+      <button ion-button block outline (click)="cancel()" *ngIf="userPicture">Cancelar</button>
     </ion-item>
   </ion-card>
 

@@ -43,6 +43,7 @@ import { ImageUtilService } from '../services/image-util.service';
     ProdutoService,
     CartService,
     ImageUtilService
+    
   ]
 })
 export class AppModule {}
